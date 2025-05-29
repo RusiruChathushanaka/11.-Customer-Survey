@@ -1,0 +1,127 @@
+<html>
+  <head>
+    <title>{{ questions.submit_page_title }}</title>
+    {# <-- MODIFIED #}
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://kit.fontawesome.com/df20e2b9e7.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static',filename='styles/style.css') }}"
+    />
+
+    <!-- Optional: If you want language switching on this page too -->
+    <!--
+    <script>
+        function changeLanguage() {
+            var selectedLang = document.getElementById('languageSelector').value;
+            // Construct URL carefully if this page needs to retain the customer_id
+            var currentUrl = new URL(window.location.href);
+            currentUrl.searchParams.set('lang', selectedLang);
+            // If you need to rebuild the path:
+            // window.location.href = `/{{ customer_id }}/submit1?lang=${selectedLang}`;
+            window.location.href = currentUrl.toString();
+
+        }
+    </script>
+    -->
+  </head>
+  <body>
+    <div class="m-4">
+      <nav class="navbar navbar-expand-lg navbar-custom">
+        <div class="container-fluid">
+          <a href="#" class="logo">
+            <img
+              src="{{ url_for('static',filename= 'logo.svg') }}"
+              alt="DGL logo"
+            />
+          </a>
+          <!-- Optional: Language selector for submit page -->
+          <!--
+                <div class="nav-item inline ms-auto me-3">
+                    <span>
+                        <select class="form-select form-select-sm" aria-label="Language select" id="languageSelector" onchange="changeLanguage()">
+                            {% for lang_code, lang_name in all_langs.items() %}
+                            <option value="{{ lang_code }}" {% if lang_code == current_lang %}selected{% endif %}>
+                                {{ lang_name }}
+                            </option>
+                            {% endfor %}
+                        </select>
+                    </span>
+                </div>
+                -->
+          <div class="nav-item inline {% if not all_langs %}ms-auto{% endif %}">
+            {# ms-auto pushes to right if no lang selector #}
+            <span class="icon">
+              <a
+                class="navbar-brand"
+                href="https://www.facebook.com/dartgloballogistics"
+                target="_blank"
+              >
+                <i class="fa-brands fa-facebook-f"></i>
+              </a>
+            </span>
+            <span class="icon">
+              <a
+                class="navbar-brand"
+                href="https://www.linkedin.com/company/dart-global-logistics-pvt-limited"
+                target="_blank"
+              >
+                <i class="fa-brands fa-linkedin-in"></i>
+              </a>
+            </span>
+          </div>
+        </div>
+      </nav>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <div class="row">
+          <div class="col-md-12">
+            <h2 class="text-center">
+              {{ questions.submit_page_main_header }} {# <-- MODIFIED #}
+            </h2>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-12">
+            <div class="row">
+              <div class="col-md-12">
+                <h6 class="thank text-center">
+                  {{ questions.submit_page_thank_you_message }} {# <-- MODIFIED
+                  #}
+                </h6>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <footer>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="row">
+          <div class="col-md-12">
+            <h6 class="text-center text-info footer-text">
+              {# Added class footer-text for potential specific styling #} {{
+              questions.submit_page_copyright|safe }} {# <-- MODIFIED, |safe for
+              &copy; #}
+            </h6>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+</html>

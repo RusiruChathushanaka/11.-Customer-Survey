@@ -1,0 +1,204 @@
+body {
+	height: 200px;
+	/* background-image: url("backimage.jpg") ;*/
+	background-size: 100%;
+	
+
+  }
+
+.navbar-custom {
+    background-color: #000d29;
+	padding: 0;
+	margin: 0;
+}
+
+.navbar-brand{
+	color: white;
+}
+
+#msform {
+	text-align: center;
+	position: relative;
+
+}
+
+
+	#msform fieldset .form-card {
+		background-color: white;
+		border: 0 none;
+		border-radius: 0px;
+		box-shadow: 0 2px 2px 2px rgba(0, 0, 0, 0.2);
+		padding: 20px 40px 60px 40px;
+		box-sizing: border-box;
+		width: 94%;
+		margin: 2% 3% 20px 3%;
+		/*stacking fieldsets above each other*/
+		position: relative;
+		
+		
+		
+	
+	}
+
+	#msform fieldset {
+		background: white;
+		border: 0 none;
+		border-radius: 0.5rem;
+		box-sizing: border-box;
+		width: 100%;
+		margin: 0;
+		padding-bottom: 20px;
+		/*stacking fieldsets above each other*/
+		position: relative;
+		
+		
+	}
+
+		/*Hide all except first fieldset*/
+		#msform fieldset:not(:first-of-type) {
+			display: none;
+		}
+
+		#msform fieldset .form-card {
+			text-align: left;
+			color: #00008B;
+			font-weight:bold;
+			font-family: Arial;
+		}
+
+	
+		.btn-secondary{
+			background-color:rgb(209, 209, 209);
+			border-color: rgb(194, 192, 192);
+			color:rgba(0, 0, 0, 0.644);
+			font-weight: bold;
+			
+		}
+
+	/*Blue Buttons*/
+	#msform .action-button {
+		width: 100px;
+		background: rgb(100, 183, 235);
+		font-weight: bold;
+		color: white;
+		border: 0 none;
+		border-radius: 0px;
+		cursor: pointer;
+		padding: 10px 5px;
+		margin: 10px 5px;
+		border-radius: 8px;
+	}
+
+	/*Previous Buttons*/
+	#msform .action-button-previous {
+		width: 100px;
+		background: #7d7d7d;
+		font-weight: bold;
+		color: white;
+		border: 0 none;
+		border-radius: 0px;
+		cursor: pointer;
+		padding: 10px 5px;
+		margin: 10px 5px;
+		border-radius: 8px;
+	}
+
+		#msform .action-button-previous:hover, #msform .action-button-previous:focus {
+			box-shadow: 0 0 0 2px white, 0 0 0 3px #606060;
+		}
+
+	.btn-success{
+		width: 100px;
+		border: 0 none;
+		border-radius: 0px;
+		cursor: pointer;
+		padding: 10px 5px;
+		margin: 10px 5px;
+		border-radius: 8px;
+	}
+
+	.midtext {
+		border-top:3px solid #4f6289;
+		display:block;
+		height:50px;
+		font-size: 13px;
+		font-weight: bold;
+		font-family: arial;
+	
+		margin-bottom: 10px;
+		clear:both;
+	}
+
+	.p-2.left{
+		color:indianred;
+	}
+
+	.p-2.right {
+		color: green;
+	}
+
+
+
+.container {
+	width: 100%;
+	padding:0;
+}
+
+
+.container-fluid{
+	margin-left:0;
+	padding-left: 0;
+}
+
+.logo{
+    display: inline-block;
+    background: #fcd00b;
+    height: 100% ;
+    width: 170px;
+	align-items: left;
+
+}
+
+.thank{
+	color: rgb(4, 102, 4);
+	font-weight: bold;
+	font-size: medium;
+}
+
+.ThankAgain{
+	color: rgb(247, 89, 41);
+	font-weight: bold;
+	font-size: medium;
+}
+
+.footer {
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	color: white;
+	text-align: center;
+  }
+
+  .welcome{
+	color:dimgray;
+	font-weight: bold;
+  }
+
+  .banner{
+	color: whitesmoke;
+  }
+
+
+  .alertbox {
+    width:100%;
+    display:none;
+    background-color: #f8cbcb;
+    text-align: center;
+	height:45px;
+	font-size: medium;
+	align-items: center;   
+	border-radius: 5px;
+    padding: 10px;
+	font-family: Arial;
+}
